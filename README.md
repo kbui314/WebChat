@@ -22,7 +22,7 @@ npm install
 ```
 To run the React application:
 ```
-cd react
+cd react/webchat
 npm start
 ```
 To run the server:
