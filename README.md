@@ -25,6 +25,19 @@ To run the React application:
 cd react/webchat
 npm start
 ```
+To run the MongoDB database:
+```
+cd server/db
+docker-compose up
+```
+Once the database is up and running, we need to login to the database with the specified credentials.
+In a separate terminal:
+```
+docker exec -it webchatdb-mongodb bash
+mongo -u <username> -p <password> --authenticationDatabase webchatdb
+```
+The username and password arguments are the values set in init-mongo.js in the keys 'user' and 'pwd'. Set the the values of 'user' and 'pwd' to credentials of your choosing.
+
 To run the server:
 ```
 cd server
