@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "genbankdb",
+            "driver": "PostgreSQL",
+            "name": "genbankdb",
+            "password": "password",
+            "port": 5432,
+            "previewLimit": 50,
+            "server": "localhost",
+            "username": "username"
+        }
+    ]
+}
