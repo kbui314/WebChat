@@ -1,12 +1,11 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
+// let Room = require("../models/Room");
 
-const schema = new mongoose.Schema({
-    email: String,
-    //password: String,
-    hash: String,
-    firstname: String,
-    lastname: String,
+const userSchema: Schema = new Schema({
+    email: { type: String, required: true, unique: true },
+    hash: { type: String, required: true },
+    firstname: { type: String, required: true },
+    lastname: { type: String, required: true },
     rooms: Array,
 });
-
-module.exports = mongoose.model("User", schema);
+module.exports = mongoose.model("User", userSchema);
